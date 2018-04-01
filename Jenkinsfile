@@ -6,12 +6,12 @@ pipeline {
         stage('Preparation') {
           agent {
             node {
-              label 'mac_node'
+              label 'win'
             }
             
           }
           steps {
-            git 'https://github.com/AliceCodeZhang/sampleCode.git'
+            git 'https://github.com/laynox/sampleCode.git'
           }
         }
         stage('second') {
@@ -41,7 +41,7 @@ pipeline {
         }
         stage('node 2') {
           agent {
-            label 'mac_node'
+            label 'win'
           }
           steps {
               sh 'pwd'
