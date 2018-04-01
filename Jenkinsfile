@@ -6,7 +6,7 @@ pipeline {
         stage('Preparation') {
           agent {
             node {
-              label 'mac'
+              label 'win'
             }
             
           }
@@ -56,17 +56,12 @@ pipeline {
         }
         stage('node 2') {
           agent {
-            label 'mac'
+            label 'win'
           }
           steps {
             sh 'pwd'
             sh 'sleep 20s'
             sh 'echo hello2'
-          }
-        }
-        stage('node3') {
-          steps {
-            sh 'pwd'
           }
         }
       }
